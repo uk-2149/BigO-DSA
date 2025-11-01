@@ -15,7 +15,7 @@ public:
         ListNode* temp = head;
         ListNode* prev = nullptr;
         while(temp!=nullptr){
-            if(s.count(temp->val)){
+            if(s.contains(temp->val)){
                 if(prev == nullptr) {
                     head = temp->next;
                 } else {
