@@ -27,11 +27,11 @@ public:
         vector<vector<char>> matr(m, vector<char>(n, 'U'));
         int g_size = guards.size();
         int w_size = walls.size();
-        for(int g=0; g<g_size; g++) {
-            matr[guards[g][0]][guards[g][1]] = 'G';
+        for(auto& g : guards) {
+            matr[g[0]][g[1]] = 'G';
         }
-        for(int w=0; w<w_size; w++) {
-            matr[walls[w][0]][walls[w][1]] = 'W';
+        for(auto& w : walls) {
+            matr[w[0]][w[1]] = 'W';
         }
         for(int r=0; r<m; r++) {
             for(int c=0; c<n; c++) {
