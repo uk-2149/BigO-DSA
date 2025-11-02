@@ -25,8 +25,6 @@ public:
     int countUnguarded(int m, int n, vector<vector<int>>& guards, vector<vector<int>>& walls) {
         int count = 0;
         vector<vector<char>> matr(m, vector<char>(n, 'U'));
-        int g_size = guards.size();
-        int w_size = walls.size();
         for(auto& g : guards) {
             matr[g[0]][g[1]] = 'G';
         }
