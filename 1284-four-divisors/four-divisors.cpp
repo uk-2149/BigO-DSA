@@ -2,11 +2,16 @@ class Solution {
     int checker(int num) {
         int cnt = 0;
         int sum = 0;
-        for(int i=1; i<=num; i++) {
+        for(int i=1; i*i<=num; i++) {
             if(cnt>4) return 0;
             if(num%i==0) {
                 cnt++;
                 sum += i;
+                int i2 = num/i;
+                if(i!=i2) {
+                    cnt++;
+                    sum += i2;
+                }
             }
         }
         if(cnt!=4) return 0;
